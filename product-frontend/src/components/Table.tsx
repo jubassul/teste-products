@@ -93,7 +93,7 @@ const TableComponent = () => {
                   <StyledTableCell>Quantidade em estoque(g)</StyledTableCell>
                   <StyledTableCell>Editar</StyledTableCell>
                   <StyledTableCell>Deletar</StyledTableCell>
-                  <StyledTableCell> <button className="button-create" onClick={() => handleOpen()}>Criar</button>
+                  <StyledTableCell> <button onClick={handleOpen} className="button-create"   >Criar</button>
                   </StyledTableCell>
                 </TableRow>
               </TableHead>
