@@ -1,0 +1,13 @@
+
+.container-table{
+    display:flex;
+    justify-content: center;
+    align items: center;
+    padding:40px;
+    border-radius: 10px;
+}
+.button-create{
+    background-color:#DCF2F1;
+    color:#010203;
+
+}
