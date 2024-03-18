@@ -39,7 +39,7 @@ const TableComponent = () => {
     },
   }));
 
-  const StyledTableCellTeste = styled(TableCell)(() => ({
+  const StyledTableCellRow = styled(TableCell)(() => ({
     [`&.${tableCellClasses.root}`]: {
       backgroundColor: "#DCF2F1",
       fontSize: 14,
@@ -90,7 +90,7 @@ const TableComponent = () => {
               <TableHead>
                 <TableRow>
                   <StyledTableCell>Nome</StyledTableCell>
-                  <StyledTableCell>Quantidade em estoque(g)</StyledTableCell>
+                  <StyledTableCell>Quantidade em estoque</StyledTableCell>
                   <StyledTableCell>Editar</StyledTableCell>
                   <StyledTableCell>Deletar</StyledTableCell>
                   <StyledTableCell> <button onClick={handleOpen} className="button-create"   >Criar</button>
@@ -103,13 +103,13 @@ const TableComponent = () => {
                     key={product.id}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
-                    <StyledTableCellTeste component="th" scope="row">
+                    <StyledTableCellRow component="th" scope="row">
                       {product.name}
-                    </StyledTableCellTeste>
-                    <StyledTableCellTeste>
+                    </StyledTableCellRow>
+                    <StyledTableCellRow>
                       {product.stock_quantity}
-                    </StyledTableCellTeste>
-                    <StyledTableCellTeste>
+                    </StyledTableCellRow>
+                    <StyledTableCellRow>
                       <EditNoteOutlinedIcon onClick={() => {
                         setId(product.id)
                         setName(product.name);
@@ -117,15 +117,15 @@ const TableComponent = () => {
                         handleEditOpen();
 
                       }} />
-                    </StyledTableCellTeste>
-                    <StyledTableCellTeste>
+                    </StyledTableCellRow>
+                    <StyledTableCellRow>
                       <DeleteOutlineOutlinedIcon
                         onClick={() => handleDeleteProduct(product.id)}
                       />
-                    </StyledTableCellTeste>
-                    <StyledTableCellTeste>
+                    </StyledTableCellRow>
+                    <StyledTableCellRow>
                       <AddOutlinedIcon onClick={() => handleOpen()} />
-                    </StyledTableCellTeste>
+                    </StyledTableCellRow>
 
                     <ModalAddComponent
                       open={open}
